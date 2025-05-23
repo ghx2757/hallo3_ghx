@@ -3,7 +3,7 @@ args:
   model_parallel_size: 1
   experiment_name: train-stage-1
   mode: finetune
-  load: ./pretrained_models/cogvideox-5b-i2v-sat/transformer # pretrained model path
+  load: /root/group-shared/digital-human/hallo3/pretrained_models/cogvideox-5b-i2v-sat/transformer # pretrained model path
 
   no_load_rng: True
   train_iters: 30000 # Suggest more than 1000 For Lora and SFT For 500 is enough

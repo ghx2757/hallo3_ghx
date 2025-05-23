@@ -3,7 +3,7 @@ args:
   latent_channels: 16
   mode: inference
 
-  load: ./pretrained_models/hallo3
+  load: /root/group-shared/digital-human/hallo3/pretrained_models/hallo3
 
   batch_size: 1
   input_type: txt
@@ -13,7 +13,7 @@ args:
   bf16: True 
   force_inference: True
   sample_rate: 16000
-  wav2vec_model_path: ./pretrained_models/wav2vec/wav2vec2-base-960h
+  wav2vec_model_path:  /root/group-shared/digital-human/hallo3/pretrained_models/wav2vec/wav2vec2-base-960h
   wav2vec_features: all
-  audio_separator_model_path: ./pretrained_models/audio_separator/Kim_Vocal_2.onnx
-  face_analysis_model_path: ./pretrained_models/face_analysis
+  audio_separator_model_path:  /root/group-shared/digital-human/hallo3/pretrained_models/audio_separator/Kim_Vocal_2.onnx
+  face_analysis_model_path:  /root/group-shared/digital-human/hallo3/pretrained_models/face_analysis
