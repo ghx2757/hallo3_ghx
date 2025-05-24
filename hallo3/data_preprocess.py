@@ -112,7 +112,7 @@ def process_all_videos(input_video_list: List[Path], output_dir: Path) -> None:
         output_dir (Path): Directory to save the output.
         gpu_status (bool): Whether to use GPU for processing.
     """
-    face_analysis_model_path = "pretrained_models/face_analysis"
+    face_analysis_model_path = "/root/group-shared/digital-human/hallo3/pretrained_models/face_analysis"
     landmark_model_path = "/root/group-shared/digital-human/hallo3/pretrained_models/face_analysis/models/face_landmarker_v2_with_blendshapes.task"
     audio_separator_model_file = "/root/group-shared/digital-human/hallo3/pretrained_models/audio_separator/Kim_Vocal_2.onnx"
     wav2vec_model_path = '/root/group-shared/digital-human/hallo3/pretrained_models/wav2vec/wav2vec2-base-960h'

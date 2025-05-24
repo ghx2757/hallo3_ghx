@@ -69,12 +69,13 @@ def construct_meta_info(frames_dir_path: Path) -> dict:
         print(f"Video path not found: {video_path}")
         return None
     
-    if not os.path.exists(caption_path):
-        print(f"Caption path not found: {video_path}")
-        return None
-    else:
-        with open(caption_path, 'r', encoding='utf-8') as file:
-            caption = file.read()
+    # if not os.path.exists(caption_path):
+    #     print(f"Caption path not found: {video_path}")
+    #     return None
+    # else:
+    #     with open(caption_path, 'r', encoding='utf-8') as file:
+    #         caption = file.read()
+    caption = 'A person is talking'
 
     return {
         "video_path": video_path,

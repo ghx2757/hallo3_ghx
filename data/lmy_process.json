@@ -1,0 +1,695 @@
+[
+    {
+        "video_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/videos/lmy_0523_part024.mp4",
+        "face_mask_union_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_mask/lmy_0523_part024.png",
+        "face_emb_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_emb/lmy_0523_part024.pt",
+        "vocals_emb_base_all": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/audio_emb/lmy_0523_part024.pt",
+        "caption": "A person is talking"
+    },
+    {
+        "video_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/videos/lmy_0523_part028.mp4",
+        "face_mask_union_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_mask/lmy_0523_part028.png",
+        "face_emb_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_emb/lmy_0523_part028.pt",
+        "vocals_emb_base_all": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/audio_emb/lmy_0523_part028.pt",
+        "caption": "A person is talking"
+    },
+    {
+        "video_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/videos/lmy_0523_part002.mp4",
+        "face_mask_union_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_mask/lmy_0523_part002.png",
+        "face_emb_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_emb/lmy_0523_part002.pt",
+        "vocals_emb_base_all": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/audio_emb/lmy_0523_part002.pt",
+        "caption": "A person is talking"
+    },
+    {
+        "video_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/videos/lmy_0523_part026.mp4",
+        "face_mask_union_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_mask/lmy_0523_part026.png",
+        "face_emb_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_emb/lmy_0523_part026.pt",
+        "vocals_emb_base_all": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/audio_emb/lmy_0523_part026.pt",
+        "caption": "A person is talking"
+    },
+    {
+        "video_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/videos/lmy_0523_part091.mp4",
+        "face_mask_union_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_mask/lmy_0523_part091.png",
+        "face_emb_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_emb/lmy_0523_part091.pt",
+        "vocals_emb_base_all": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/audio_emb/lmy_0523_part091.pt",
+        "caption": "A person is talking"
+    },
+    {
+        "video_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/videos/lmy_0523_part055.mp4",
+        "face_mask_union_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_mask/lmy_0523_part055.png",
+        "face_emb_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_emb/lmy_0523_part055.pt",
+        "vocals_emb_base_all": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/audio_emb/lmy_0523_part055.pt",
+        "caption": "A person is talking"
+    },
+    {
+        "video_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/videos/lmy_0523_part082.mp4",
+        "face_mask_union_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_mask/lmy_0523_part082.png",
+        "face_emb_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_emb/lmy_0523_part082.pt",
+        "vocals_emb_base_all": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/audio_emb/lmy_0523_part082.pt",
+        "caption": "A person is talking"
+    },
+    {
+        "video_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/videos/lmy_0523_part076.mp4",
+        "face_mask_union_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_mask/lmy_0523_part076.png",
+        "face_emb_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_emb/lmy_0523_part076.pt",
+        "vocals_emb_base_all": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/audio_emb/lmy_0523_part076.pt",
+        "caption": "A person is talking"
+    },
+    {
+        "video_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/videos/lmy_0523_part077.mp4",
+        "face_mask_union_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_mask/lmy_0523_part077.png",
+        "face_emb_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_emb/lmy_0523_part077.pt",
+        "vocals_emb_base_all": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/audio_emb/lmy_0523_part077.pt",
+        "caption": "A person is talking"
+    },
+    {
+        "video_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/videos/lmy_0523_part085.mp4",
+        "face_mask_union_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_mask/lmy_0523_part085.png",
+        "face_emb_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_emb/lmy_0523_part085.pt",
+        "vocals_emb_base_all": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/audio_emb/lmy_0523_part085.pt",
+        "caption": "A person is talking"
+    },
+    {
+        "video_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/videos/lmy_0523_part034.mp4",
+        "face_mask_union_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_mask/lmy_0523_part034.png",
+        "face_emb_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_emb/lmy_0523_part034.pt",
+        "vocals_emb_base_all": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/audio_emb/lmy_0523_part034.pt",
+        "caption": "A person is talking"
+    },
+    {
+        "video_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/videos/lmy_0523_part058.mp4",
+        "face_mask_union_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_mask/lmy_0523_part058.png",
+        "face_emb_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_emb/lmy_0523_part058.pt",
+        "vocals_emb_base_all": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/audio_emb/lmy_0523_part058.pt",
+        "caption": "A person is talking"
+    },
+    {
+        "video_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/videos/lmy_0523_part023.mp4",
+        "face_mask_union_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_mask/lmy_0523_part023.png",
+        "face_emb_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_emb/lmy_0523_part023.pt",
+        "vocals_emb_base_all": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/audio_emb/lmy_0523_part023.pt",
+        "caption": "A person is talking"
+    },
+    {
+        "video_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/videos/lmy_0523_part060.mp4",
+        "face_mask_union_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_mask/lmy_0523_part060.png",
+        "face_emb_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_emb/lmy_0523_part060.pt",
+        "vocals_emb_base_all": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/audio_emb/lmy_0523_part060.pt",
+        "caption": "A person is talking"
+    },
+    {
+        "video_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/videos/lmy_0523_part049.mp4",
+        "face_mask_union_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_mask/lmy_0523_part049.png",
+        "face_emb_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_emb/lmy_0523_part049.pt",
+        "vocals_emb_base_all": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/audio_emb/lmy_0523_part049.pt",
+        "caption": "A person is talking"
+    },
+    {
+        "video_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/videos/lmy_0523_part029.mp4",
+        "face_mask_union_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_mask/lmy_0523_part029.png",
+        "face_emb_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_emb/lmy_0523_part029.pt",
+        "vocals_emb_base_all": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/audio_emb/lmy_0523_part029.pt",
+        "caption": "A person is talking"
+    },
+    {
+        "video_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/videos/lmy_0523_part088.mp4",
+        "face_mask_union_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_mask/lmy_0523_part088.png",
+        "face_emb_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_emb/lmy_0523_part088.pt",
+        "vocals_emb_base_all": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/audio_emb/lmy_0523_part088.pt",
+        "caption": "A person is talking"
+    },
+    {
+        "video_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/videos/lmy_0523_part046.mp4",
+        "face_mask_union_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_mask/lmy_0523_part046.png",
+        "face_emb_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_emb/lmy_0523_part046.pt",
+        "vocals_emb_base_all": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/audio_emb/lmy_0523_part046.pt",
+        "caption": "A person is talking"
+    },
+    {
+        "video_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/videos/lmy_0523_part064.mp4",
+        "face_mask_union_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_mask/lmy_0523_part064.png",
+        "face_emb_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_emb/lmy_0523_part064.pt",
+        "vocals_emb_base_all": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/audio_emb/lmy_0523_part064.pt",
+        "caption": "A person is talking"
+    },
+    {
+        "video_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/videos/lmy_0523_part084.mp4",
+        "face_mask_union_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_mask/lmy_0523_part084.png",
+        "face_emb_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_emb/lmy_0523_part084.pt",
+        "vocals_emb_base_all": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/audio_emb/lmy_0523_part084.pt",
+        "caption": "A person is talking"
+    },
+    {
+        "video_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/videos/lmy_0523_part022.mp4",
+        "face_mask_union_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_mask/lmy_0523_part022.png",
+        "face_emb_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_emb/lmy_0523_part022.pt",
+        "vocals_emb_base_all": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/audio_emb/lmy_0523_part022.pt",
+        "caption": "A person is talking"
+    },
+    {
+        "video_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/videos/lmy_0523_part061.mp4",
+        "face_mask_union_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_mask/lmy_0523_part061.png",
+        "face_emb_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_emb/lmy_0523_part061.pt",
+        "vocals_emb_base_all": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/audio_emb/lmy_0523_part061.pt",
+        "caption": "A person is talking"
+    },
+    {
+        "video_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/videos/lmy_0523_part012.mp4",
+        "face_mask_union_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_mask/lmy_0523_part012.png",
+        "face_emb_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_emb/lmy_0523_part012.pt",
+        "vocals_emb_base_all": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/audio_emb/lmy_0523_part012.pt",
+        "caption": "A person is talking"
+    },
+    {
+        "video_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/videos/lmy_0523_part056.mp4",
+        "face_mask_union_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_mask/lmy_0523_part056.png",
+        "face_emb_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_emb/lmy_0523_part056.pt",
+        "vocals_emb_base_all": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/audio_emb/lmy_0523_part056.pt",
+        "caption": "A person is talking"
+    },
+    {
+        "video_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/videos/lmy_0523_part089.mp4",
+        "face_mask_union_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_mask/lmy_0523_part089.png",
+        "face_emb_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_emb/lmy_0523_part089.pt",
+        "vocals_emb_base_all": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/audio_emb/lmy_0523_part089.pt",
+        "caption": "A person is talking"
+    },
+    {
+        "video_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/videos/lmy_0523_part048.mp4",
+        "face_mask_union_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_mask/lmy_0523_part048.png",
+        "face_emb_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_emb/lmy_0523_part048.pt",
+        "vocals_emb_base_all": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/audio_emb/lmy_0523_part048.pt",
+        "caption": "A person is talking"
+    },
+    {
+        "video_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/videos/lmy_0523_part067.mp4",
+        "face_mask_union_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_mask/lmy_0523_part067.png",
+        "face_emb_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_emb/lmy_0523_part067.pt",
+        "vocals_emb_base_all": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/audio_emb/lmy_0523_part067.pt",
+        "caption": "A person is talking"
+    },
+    {
+        "video_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/videos/lmy_0523_part054.mp4",
+        "face_mask_union_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_mask/lmy_0523_part054.png",
+        "face_emb_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_emb/lmy_0523_part054.pt",
+        "vocals_emb_base_all": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/audio_emb/lmy_0523_part054.pt",
+        "caption": "A person is talking"
+    },
+    {
+        "video_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/videos/lmy_0523_part057.mp4",
+        "face_mask_union_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_mask/lmy_0523_part057.png",
+        "face_emb_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_emb/lmy_0523_part057.pt",
+        "vocals_emb_base_all": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/audio_emb/lmy_0523_part057.pt",
+        "caption": "A person is talking"
+    },
+    {
+        "video_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/videos/lmy_0523_part097.mp4",
+        "face_mask_union_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_mask/lmy_0523_part097.png",
+        "face_emb_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_emb/lmy_0523_part097.pt",
+        "vocals_emb_base_all": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/audio_emb/lmy_0523_part097.pt",
+        "caption": "A person is talking"
+    },
+    {
+        "video_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/videos/lmy_0523_part074.mp4",
+        "face_mask_union_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_mask/lmy_0523_part074.png",
+        "face_emb_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_emb/lmy_0523_part074.pt",
+        "vocals_emb_base_all": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/audio_emb/lmy_0523_part074.pt",
+        "caption": "A person is talking"
+    },
+    {
+        "video_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/videos/lmy_0523_part045.mp4",
+        "face_mask_union_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_mask/lmy_0523_part045.png",
+        "face_emb_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_emb/lmy_0523_part045.pt",
+        "vocals_emb_base_all": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/audio_emb/lmy_0523_part045.pt",
+        "caption": "A person is talking"
+    },
+    {
+        "video_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/videos/lmy_0523_part025.mp4",
+        "face_mask_union_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_mask/lmy_0523_part025.png",
+        "face_emb_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_emb/lmy_0523_part025.pt",
+        "vocals_emb_base_all": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/audio_emb/lmy_0523_part025.pt",
+        "caption": "A person is talking"
+    },
+    {
+        "video_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/videos/lmy_0523_part050.mp4",
+        "face_mask_union_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_mask/lmy_0523_part050.png",
+        "face_emb_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_emb/lmy_0523_part050.pt",
+        "vocals_emb_base_all": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/audio_emb/lmy_0523_part050.pt",
+        "caption": "A person is talking"
+    },
+    {
+        "video_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/videos/lmy_0523_part072.mp4",
+        "face_mask_union_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_mask/lmy_0523_part072.png",
+        "face_emb_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_emb/lmy_0523_part072.pt",
+        "vocals_emb_base_all": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/audio_emb/lmy_0523_part072.pt",
+        "caption": "A person is talking"
+    },
+    {
+        "video_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/videos/lmy_0523_part042.mp4",
+        "face_mask_union_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_mask/lmy_0523_part042.png",
+        "face_emb_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_emb/lmy_0523_part042.pt",
+        "vocals_emb_base_all": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/audio_emb/lmy_0523_part042.pt",
+        "caption": "A person is talking"
+    },
+    {
+        "video_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/videos/lmy_0523_part095.mp4",
+        "face_mask_union_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_mask/lmy_0523_part095.png",
+        "face_emb_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_emb/lmy_0523_part095.pt",
+        "vocals_emb_base_all": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/audio_emb/lmy_0523_part095.pt",
+        "caption": "A person is talking"
+    },
+    {
+        "video_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/videos/lmy_0523_part047.mp4",
+        "face_mask_union_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_mask/lmy_0523_part047.png",
+        "face_emb_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_emb/lmy_0523_part047.pt",
+        "vocals_emb_base_all": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/audio_emb/lmy_0523_part047.pt",
+        "caption": "A person is talking"
+    },
+    {
+        "video_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/videos/lmy_0523_part062.mp4",
+        "face_mask_union_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_mask/lmy_0523_part062.png",
+        "face_emb_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_emb/lmy_0523_part062.pt",
+        "vocals_emb_base_all": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/audio_emb/lmy_0523_part062.pt",
+        "caption": "A person is talking"
+    },
+    {
+        "video_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/videos/lmy_0523_part069.mp4",
+        "face_mask_union_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_mask/lmy_0523_part069.png",
+        "face_emb_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_emb/lmy_0523_part069.pt",
+        "vocals_emb_base_all": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/audio_emb/lmy_0523_part069.pt",
+        "caption": "A person is talking"
+    },
+    {
+        "video_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/videos/lmy_0523_part090.mp4",
+        "face_mask_union_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_mask/lmy_0523_part090.png",
+        "face_emb_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_emb/lmy_0523_part090.pt",
+        "vocals_emb_base_all": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/audio_emb/lmy_0523_part090.pt",
+        "caption": "A person is talking"
+    },
+    {
+        "video_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/videos/lmy_0523_part052.mp4",
+        "face_mask_union_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_mask/lmy_0523_part052.png",
+        "face_emb_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_emb/lmy_0523_part052.pt",
+        "vocals_emb_base_all": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/audio_emb/lmy_0523_part052.pt",
+        "caption": "A person is talking"
+    },
+    {
+        "video_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/videos/lmy_0523_part096.mp4",
+        "face_mask_union_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_mask/lmy_0523_part096.png",
+        "face_emb_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_emb/lmy_0523_part096.pt",
+        "vocals_emb_base_all": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/audio_emb/lmy_0523_part096.pt",
+        "caption": "A person is talking"
+    },
+    {
+        "video_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/videos/lmy_0523_part075.mp4",
+        "face_mask_union_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_mask/lmy_0523_part075.png",
+        "face_emb_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_emb/lmy_0523_part075.pt",
+        "vocals_emb_base_all": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/audio_emb/lmy_0523_part075.pt",
+        "caption": "A person is talking"
+    },
+    {
+        "video_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/videos/lmy_0523_part040.mp4",
+        "face_mask_union_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_mask/lmy_0523_part040.png",
+        "face_emb_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_emb/lmy_0523_part040.pt",
+        "vocals_emb_base_all": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/audio_emb/lmy_0523_part040.pt",
+        "caption": "A person is talking"
+    },
+    {
+        "video_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/videos/lmy_0523_part021.mp4",
+        "face_mask_union_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_mask/lmy_0523_part021.png",
+        "face_emb_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_emb/lmy_0523_part021.pt",
+        "vocals_emb_base_all": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/audio_emb/lmy_0523_part021.pt",
+        "caption": "A person is talking"
+    },
+    {
+        "video_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/videos/lmy_0523_part003.mp4",
+        "face_mask_union_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_mask/lmy_0523_part003.png",
+        "face_emb_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_emb/lmy_0523_part003.pt",
+        "vocals_emb_base_all": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/audio_emb/lmy_0523_part003.pt",
+        "caption": "A person is talking"
+    },
+    {
+        "video_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/videos/lmy_0523_part008.mp4",
+        "face_mask_union_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_mask/lmy_0523_part008.png",
+        "face_emb_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_emb/lmy_0523_part008.pt",
+        "vocals_emb_base_all": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/audio_emb/lmy_0523_part008.pt",
+        "caption": "A person is talking"
+    },
+    {
+        "video_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/videos/lmy_0523_part093.mp4",
+        "face_mask_union_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_mask/lmy_0523_part093.png",
+        "face_emb_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_emb/lmy_0523_part093.pt",
+        "vocals_emb_base_all": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/audio_emb/lmy_0523_part093.pt",
+        "caption": "A person is talking"
+    },
+    {
+        "video_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/videos/lmy_0523_part005.mp4",
+        "face_mask_union_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_mask/lmy_0523_part005.png",
+        "face_emb_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_emb/lmy_0523_part005.pt",
+        "vocals_emb_base_all": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/audio_emb/lmy_0523_part005.pt",
+        "caption": "A person is talking"
+    },
+    {
+        "video_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/videos/lmy_0523_part051.mp4",
+        "face_mask_union_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_mask/lmy_0523_part051.png",
+        "face_emb_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_emb/lmy_0523_part051.pt",
+        "vocals_emb_base_all": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/audio_emb/lmy_0523_part051.pt",
+        "caption": "A person is talking"
+    },
+    {
+        "video_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/videos/lmy_0523_part006.mp4",
+        "face_mask_union_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_mask/lmy_0523_part006.png",
+        "face_emb_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_emb/lmy_0523_part006.pt",
+        "vocals_emb_base_all": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/audio_emb/lmy_0523_part006.pt",
+        "caption": "A person is talking"
+    },
+    {
+        "video_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/videos/lmy_0523_part018.mp4",
+        "face_mask_union_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_mask/lmy_0523_part018.png",
+        "face_emb_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_emb/lmy_0523_part018.pt",
+        "vocals_emb_base_all": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/audio_emb/lmy_0523_part018.pt",
+        "caption": "A person is talking"
+    },
+    {
+        "video_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/videos/lmy_0523_part053.mp4",
+        "face_mask_union_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_mask/lmy_0523_part053.png",
+        "face_emb_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_emb/lmy_0523_part053.pt",
+        "vocals_emb_base_all": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/audio_emb/lmy_0523_part053.pt",
+        "caption": "A person is talking"
+    },
+    {
+        "video_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/videos/lmy_0523_part081.mp4",
+        "face_mask_union_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_mask/lmy_0523_part081.png",
+        "face_emb_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_emb/lmy_0523_part081.pt",
+        "vocals_emb_base_all": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/audio_emb/lmy_0523_part081.pt",
+        "caption": "A person is talking"
+    },
+    {
+        "video_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/videos/lmy_0523_part078.mp4",
+        "face_mask_union_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_mask/lmy_0523_part078.png",
+        "face_emb_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_emb/lmy_0523_part078.pt",
+        "vocals_emb_base_all": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/audio_emb/lmy_0523_part078.pt",
+        "caption": "A person is talking"
+    },
+    {
+        "video_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/videos/lmy_0523_part032.mp4",
+        "face_mask_union_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_mask/lmy_0523_part032.png",
+        "face_emb_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_emb/lmy_0523_part032.pt",
+        "vocals_emb_base_all": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/audio_emb/lmy_0523_part032.pt",
+        "caption": "A person is talking"
+    },
+    {
+        "video_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/videos/lmy_0523_part019.mp4",
+        "face_mask_union_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_mask/lmy_0523_part019.png",
+        "face_emb_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_emb/lmy_0523_part019.pt",
+        "vocals_emb_base_all": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/audio_emb/lmy_0523_part019.pt",
+        "caption": "A person is talking"
+    },
+    {
+        "video_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/videos/lmy_0523_part035.mp4",
+        "face_mask_union_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_mask/lmy_0523_part035.png",
+        "face_emb_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_emb/lmy_0523_part035.pt",
+        "vocals_emb_base_all": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/audio_emb/lmy_0523_part035.pt",
+        "caption": "A person is talking"
+    },
+    {
+        "video_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/videos/lmy_0523_part070.mp4",
+        "face_mask_union_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_mask/lmy_0523_part070.png",
+        "face_emb_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_emb/lmy_0523_part070.pt",
+        "vocals_emb_base_all": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/audio_emb/lmy_0523_part070.pt",
+        "caption": "A person is talking"
+    },
+    {
+        "video_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/videos/lmy_0523_part013.mp4",
+        "face_mask_union_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_mask/lmy_0523_part013.png",
+        "face_emb_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_emb/lmy_0523_part013.pt",
+        "vocals_emb_base_all": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/audio_emb/lmy_0523_part013.pt",
+        "caption": "A person is talking"
+    },
+    {
+        "video_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/videos/lmy_0523_part030.mp4",
+        "face_mask_union_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_mask/lmy_0523_part030.png",
+        "face_emb_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_emb/lmy_0523_part030.pt",
+        "vocals_emb_base_all": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/audio_emb/lmy_0523_part030.pt",
+        "caption": "A person is talking"
+    },
+    {
+        "video_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/videos/lmy_0523_part087.mp4",
+        "face_mask_union_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_mask/lmy_0523_part087.png",
+        "face_emb_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_emb/lmy_0523_part087.pt",
+        "vocals_emb_base_all": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/audio_emb/lmy_0523_part087.pt",
+        "caption": "A person is talking"
+    },
+    {
+        "video_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/videos/lmy_0523_part004.mp4",
+        "face_mask_union_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_mask/lmy_0523_part004.png",
+        "face_emb_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_emb/lmy_0523_part004.pt",
+        "vocals_emb_base_all": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/audio_emb/lmy_0523_part004.pt",
+        "caption": "A person is talking"
+    },
+    {
+        "video_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/videos/lmy_0523_part014.mp4",
+        "face_mask_union_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_mask/lmy_0523_part014.png",
+        "face_emb_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_emb/lmy_0523_part014.pt",
+        "vocals_emb_base_all": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/audio_emb/lmy_0523_part014.pt",
+        "caption": "A person is talking"
+    },
+    {
+        "video_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/videos/lmy_0523_part059.mp4",
+        "face_mask_union_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_mask/lmy_0523_part059.png",
+        "face_emb_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_emb/lmy_0523_part059.pt",
+        "vocals_emb_base_all": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/audio_emb/lmy_0523_part059.pt",
+        "caption": "A person is talking"
+    },
+    {
+        "video_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/videos/lmy_0523_part017.mp4",
+        "face_mask_union_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_mask/lmy_0523_part017.png",
+        "face_emb_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_emb/lmy_0523_part017.pt",
+        "vocals_emb_base_all": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/audio_emb/lmy_0523_part017.pt",
+        "caption": "A person is talking"
+    },
+    {
+        "video_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/videos/lmy_0523_part063.mp4",
+        "face_mask_union_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_mask/lmy_0523_part063.png",
+        "face_emb_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_emb/lmy_0523_part063.pt",
+        "vocals_emb_base_all": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/audio_emb/lmy_0523_part063.pt",
+        "caption": "A person is talking"
+    },
+    {
+        "video_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/videos/lmy_0523_part036.mp4",
+        "face_mask_union_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_mask/lmy_0523_part036.png",
+        "face_emb_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_emb/lmy_0523_part036.pt",
+        "vocals_emb_base_all": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/audio_emb/lmy_0523_part036.pt",
+        "caption": "A person is talking"
+    },
+    {
+        "video_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/videos/lmy_0523_part037.mp4",
+        "face_mask_union_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_mask/lmy_0523_part037.png",
+        "face_emb_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_emb/lmy_0523_part037.pt",
+        "vocals_emb_base_all": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/audio_emb/lmy_0523_part037.pt",
+        "caption": "A person is talking"
+    },
+    {
+        "video_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/videos/lmy_0523_part083.mp4",
+        "face_mask_union_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_mask/lmy_0523_part083.png",
+        "face_emb_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_emb/lmy_0523_part083.pt",
+        "vocals_emb_base_all": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/audio_emb/lmy_0523_part083.pt",
+        "caption": "A person is talking"
+    },
+    {
+        "video_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/videos/lmy_0523_part100.mp4",
+        "face_mask_union_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_mask/lmy_0523_part100.png",
+        "face_emb_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_emb/lmy_0523_part100.pt",
+        "vocals_emb_base_all": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/audio_emb/lmy_0523_part100.pt",
+        "caption": "A person is talking"
+    },
+    {
+        "video_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/videos/lmy_0523_part031.mp4",
+        "face_mask_union_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_mask/lmy_0523_part031.png",
+        "face_emb_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_emb/lmy_0523_part031.pt",
+        "vocals_emb_base_all": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/audio_emb/lmy_0523_part031.pt",
+        "caption": "A person is talking"
+    },
+    {
+        "video_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/videos/lmy_0523_part033.mp4",
+        "face_mask_union_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_mask/lmy_0523_part033.png",
+        "face_emb_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_emb/lmy_0523_part033.pt",
+        "vocals_emb_base_all": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/audio_emb/lmy_0523_part033.pt",
+        "caption": "A person is talking"
+    },
+    {
+        "video_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/videos/lmy_0523_part065.mp4",
+        "face_mask_union_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_mask/lmy_0523_part065.png",
+        "face_emb_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_emb/lmy_0523_part065.pt",
+        "vocals_emb_base_all": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/audio_emb/lmy_0523_part065.pt",
+        "caption": "A person is talking"
+    },
+    {
+        "video_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/videos/lmy_0523_part071.mp4",
+        "face_mask_union_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_mask/lmy_0523_part071.png",
+        "face_emb_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_emb/lmy_0523_part071.pt",
+        "vocals_emb_base_all": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/audio_emb/lmy_0523_part071.pt",
+        "caption": "A person is talking"
+    },
+    {
+        "video_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/videos/lmy_0523_part027.mp4",
+        "face_mask_union_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_mask/lmy_0523_part027.png",
+        "face_emb_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_emb/lmy_0523_part027.pt",
+        "vocals_emb_base_all": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/audio_emb/lmy_0523_part027.pt",
+        "caption": "A person is talking"
+    },
+    {
+        "video_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/videos/lmy_0523_part043.mp4",
+        "face_mask_union_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_mask/lmy_0523_part043.png",
+        "face_emb_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_emb/lmy_0523_part043.pt",
+        "vocals_emb_base_all": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/audio_emb/lmy_0523_part043.pt",
+        "caption": "A person is talking"
+    },
+    {
+        "video_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/videos/lmy_0523_part098.mp4",
+        "face_mask_union_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_mask/lmy_0523_part098.png",
+        "face_emb_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_emb/lmy_0523_part098.pt",
+        "vocals_emb_base_all": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/audio_emb/lmy_0523_part098.pt",
+        "caption": "A person is talking"
+    },
+    {
+        "video_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/videos/lmy_0523_part020.mp4",
+        "face_mask_union_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_mask/lmy_0523_part020.png",
+        "face_emb_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_emb/lmy_0523_part020.pt",
+        "vocals_emb_base_all": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/audio_emb/lmy_0523_part020.pt",
+        "caption": "A person is talking"
+    },
+    {
+        "video_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/videos/lmy_0523_part099.mp4",
+        "face_mask_union_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_mask/lmy_0523_part099.png",
+        "face_emb_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_emb/lmy_0523_part099.pt",
+        "vocals_emb_base_all": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/audio_emb/lmy_0523_part099.pt",
+        "caption": "A person is talking"
+    },
+    {
+        "video_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/videos/lmy_0523_part041.mp4",
+        "face_mask_union_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_mask/lmy_0523_part041.png",
+        "face_emb_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_emb/lmy_0523_part041.pt",
+        "vocals_emb_base_all": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/audio_emb/lmy_0523_part041.pt",
+        "caption": "A person is talking"
+    },
+    {
+        "video_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/videos/lmy_0523_part010.mp4",
+        "face_mask_union_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_mask/lmy_0523_part010.png",
+        "face_emb_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_emb/lmy_0523_part010.pt",
+        "vocals_emb_base_all": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/audio_emb/lmy_0523_part010.pt",
+        "caption": "A person is talking"
+    },
+    {
+        "video_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/videos/lmy_0523_part007.mp4",
+        "face_mask_union_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_mask/lmy_0523_part007.png",
+        "face_emb_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_emb/lmy_0523_part007.pt",
+        "vocals_emb_base_all": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/audio_emb/lmy_0523_part007.pt",
+        "caption": "A person is talking"
+    },
+    {
+        "video_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/videos/lmy_0523_part086.mp4",
+        "face_mask_union_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_mask/lmy_0523_part086.png",
+        "face_emb_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_emb/lmy_0523_part086.pt",
+        "vocals_emb_base_all": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/audio_emb/lmy_0523_part086.pt",
+        "caption": "A person is talking"
+    },
+    {
+        "video_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/videos/lmy_0523_part080.mp4",
+        "face_mask_union_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_mask/lmy_0523_part080.png",
+        "face_emb_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_emb/lmy_0523_part080.pt",
+        "vocals_emb_base_all": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/audio_emb/lmy_0523_part080.pt",
+        "caption": "A person is talking"
+    },
+    {
+        "video_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/videos/lmy_0523_part038.mp4",
+        "face_mask_union_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_mask/lmy_0523_part038.png",
+        "face_emb_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_emb/lmy_0523_part038.pt",
+        "vocals_emb_base_all": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/audio_emb/lmy_0523_part038.pt",
+        "caption": "A person is talking"
+    },
+    {
+        "video_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/videos/lmy_0523_part001.mp4",
+        "face_mask_union_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_mask/lmy_0523_part001.png",
+        "face_emb_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_emb/lmy_0523_part001.pt",
+        "vocals_emb_base_all": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/audio_emb/lmy_0523_part001.pt",
+        "caption": "A person is talking"
+    },
+    {
+        "video_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/videos/lmy_0523_part039.mp4",
+        "face_mask_union_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_mask/lmy_0523_part039.png",
+        "face_emb_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_emb/lmy_0523_part039.pt",
+        "vocals_emb_base_all": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/audio_emb/lmy_0523_part039.pt",
+        "caption": "A person is talking"
+    },
+    {
+        "video_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/videos/lmy_0523_part066.mp4",
+        "face_mask_union_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_mask/lmy_0523_part066.png",
+        "face_emb_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_emb/lmy_0523_part066.pt",
+        "vocals_emb_base_all": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/audio_emb/lmy_0523_part066.pt",
+        "caption": "A person is talking"
+    },
+    {
+        "video_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/videos/lmy_0523_part092.mp4",
+        "face_mask_union_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_mask/lmy_0523_part092.png",
+        "face_emb_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_emb/lmy_0523_part092.pt",
+        "vocals_emb_base_all": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/audio_emb/lmy_0523_part092.pt",
+        "caption": "A person is talking"
+    },
+    {
+        "video_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/videos/lmy_0523_part016.mp4",
+        "face_mask_union_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_mask/lmy_0523_part016.png",
+        "face_emb_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_emb/lmy_0523_part016.pt",
+        "vocals_emb_base_all": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/audio_emb/lmy_0523_part016.pt",
+        "caption": "A person is talking"
+    },
+    {
+        "video_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/videos/lmy_0523_part094.mp4",
+        "face_mask_union_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_mask/lmy_0523_part094.png",
+        "face_emb_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_emb/lmy_0523_part094.pt",
+        "vocals_emb_base_all": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/audio_emb/lmy_0523_part094.pt",
+        "caption": "A person is talking"
+    },
+    {
+        "video_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/videos/lmy_0523_part044.mp4",
+        "face_mask_union_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_mask/lmy_0523_part044.png",
+        "face_emb_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_emb/lmy_0523_part044.pt",
+        "vocals_emb_base_all": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/audio_emb/lmy_0523_part044.pt",
+        "caption": "A person is talking"
+    },
+    {
+        "video_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/videos/lmy_0523_part011.mp4",
+        "face_mask_union_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_mask/lmy_0523_part011.png",
+        "face_emb_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_emb/lmy_0523_part011.pt",
+        "vocals_emb_base_all": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/audio_emb/lmy_0523_part011.pt",
+        "caption": "A person is talking"
+    },
+    {
+        "video_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/videos/lmy_0523_part068.mp4",
+        "face_mask_union_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_mask/lmy_0523_part068.png",
+        "face_emb_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_emb/lmy_0523_part068.pt",
+        "vocals_emb_base_all": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/audio_emb/lmy_0523_part068.pt",
+        "caption": "A person is talking"
+    },
+    {
+        "video_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/videos/lmy_0523_part009.mp4",
+        "face_mask_union_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_mask/lmy_0523_part009.png",
+        "face_emb_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_emb/lmy_0523_part009.pt",
+        "vocals_emb_base_all": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/audio_emb/lmy_0523_part009.pt",
+        "caption": "A person is talking"
+    },
+    {
+        "video_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/videos/lmy_0523_part015.mp4",
+        "face_mask_union_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_mask/lmy_0523_part015.png",
+        "face_emb_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_emb/lmy_0523_part015.pt",
+        "vocals_emb_base_all": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/audio_emb/lmy_0523_part015.pt",
+        "caption": "A person is talking"
+    },
+    {
+        "video_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/videos/lmy_0523_part073.mp4",
+        "face_mask_union_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_mask/lmy_0523_part073.png",
+        "face_emb_path": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/face_emb/lmy_0523_part073.pt",
+        "vocals_emb_base_all": "/root/gaohaixiang/code/hallo3_ghx/lmy_process/audio_emb/lmy_0523_part073.pt",
+        "caption": "A person is talking"
+    }
+]

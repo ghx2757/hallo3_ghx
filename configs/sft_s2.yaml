@@ -8,18 +8,18 @@ args:
   load: # checkpoint path
 
   no_load_rng: True
-  train_iters: 30000 
+  train_iters: 5000
   eval_iters: 1
-  eval_interval: 30000
+  eval_interval: 200
   eval_batch_size: 1
   save: stage-2
-  save_interval: 500
+  save_interval: 1000
   log_interval: 1
   train_data: [
-    "",
+    "./data/lmy_process.json",
   ] # Train data path
   valid_data: [ 
-    "",
+    "./data/lmy_process.json",
   ] # Validation data path, can be the same as train_data(not recommended)
   split: 1,0,0
   num_workers: 8

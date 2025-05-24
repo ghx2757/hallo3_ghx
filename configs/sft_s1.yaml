@@ -6,18 +6,18 @@ args:
   load: /root/group-shared/digital-human/hallo3/pretrained_models/cogvideox-5b-i2v-sat/transformer # pretrained model path
 
   no_load_rng: True
-  train_iters: 30000 # Suggest more than 1000 For Lora and SFT For 500 is enough
+  train_iters: 5000 # Suggest more than 1000 For Lora and SFT For 500 is enough
   eval_iters: 1
-  eval_interval: 30000
+  eval_interval: 200
   eval_batch_size: 1
   save: ./stage-1
-  save_interval: 500
+  save_interval: 1000
   log_interval: 1
   train_data: [
-    "",
+    "./data/lmy_process.json",
   ] # Train data path
   valid_data: [ 
-    "",
+    "./data/lmy_process.json",
   ] # Validation data path, can be the same as train_data(not recommended)
   split: 1,0,0
   num_workers: 8
