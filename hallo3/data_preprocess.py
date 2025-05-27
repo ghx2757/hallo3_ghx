@@ -69,14 +69,14 @@ def process_single_video(video_path: Path,
         gpu_status (bool): Whether to use GPU for processing.
     """
     assert video_path.exists(), f"Video path {video_path} does not exist"
-    dirs = setup_directories(video_path)
+    dirs = setup_directories(video_path) # 创建输出目录
     logging.info(f"Processing video: {video_path}")
 
     try:
         images_output_dir = output_dir / 'images' / video_path.stem
         images_output_dir.mkdir(parents=True, exist_ok=True)
         images_output_dir = convert_video_to_images(
-            video_path, images_output_dir)
+            video_path, images_output_dir) # 视频切帧， 切帧默认fps为25
         logging.info(f"Images saved to: {images_output_dir}")
         
         fps = get_fps(video_path)
@@ -85,7 +85,7 @@ def process_single_video(video_path: Path,
         audio_output_dir.mkdir(parents=True, exist_ok=True)
         audio_output_path = audio_output_dir / f'{video_path.stem}.wav'
         audio_output_path = extract_audio_from_videos(
-            video_path, audio_output_path)
+            video_path, audio_output_path) # 提取音频，默认采样率为16kHz
         logging.info(f"Audio extracted to: {audio_output_path}")
 
         face_mask, face_emb, _, _, _ = image_processor.preprocess(
@@ -117,15 +117,17 @@ def process_all_videos(input_video_list: List[Path], output_dir: Path) -> None:
     audio_separator_model_file = "/root/group-shared/digital-human/hallo3/pretrained_models/audio_separator/Kim_Vocal_2.onnx"
     wav2vec_model_path = '/root/group-shared/digital-human/hallo3/pretrained_models/wav2vec/wav2vec2-base-960h'
 
-    audio_processor = AudioProcessor(
+    # 音频处理
+    audio_processor = AudioProcessor( # fps 默认25
         16000,
         wav2vec_model_path,
-        False,
+        False, # 是否只是用最后的特征
         os.path.dirname(audio_separator_model_file),
         os.path.basename(audio_separator_model_file),
         os.path.join(output_dir, "vocals"),
     )
 
+    # 图像处理
     image_processor = ImageProcessorForDataProcessing(
         face_analysis_model_path, landmark_model_path)
 
@@ -167,7 +169,7 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     if args.output_dir is None:
-        args.output_dir = args.input_dir.parent
+        args.output_dir = args.input_dir.parent # 输出目录若不指定，默认为输入目录
 
     video_path_list = get_video_paths(
         args.input_dir, args.parallelism, args.rank)

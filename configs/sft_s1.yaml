@@ -8,7 +8,7 @@ args:
   no_load_rng: True
   train_iters: 5000 # Suggest more than 1000 For Lora and SFT For 500 is enough
   eval_iters: 1
-  eval_interval: 200
+  eval_interval: 5000
   eval_batch_size: 1
   save: ./stage-1
   save_interval: 1000
