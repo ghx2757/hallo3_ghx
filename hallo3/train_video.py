@@ -17,8 +17,14 @@ from diffusion_video import SATVideoDiffusionEngine
 from arguments import get_args
 import warnings
 
+from sat.model.base_model import get_model # by ghx
+from sat.training.model_io import load_checkpoint # by ghx
+
 from einops import rearrange
 from icecream import ic
+
+import time
+from datetime import datetime
 
 try:
     import wandb
@@ -207,6 +213,10 @@ if __name__ == "__main__":
         os.environ["WORLD_SIZE"] = os.environ["OMPI_COMM_WORLD_SIZE"]
         os.environ["RANK"] = os.environ["OMPI_COMM_WORLD_RANK"]
 
+    start_time = time.time()   
+    start_time_str = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    print("begin time:", start_time_str)
+
     py_parser = argparse.ArgumentParser(add_help=False)
     known, args_list = py_parser.parse_known_args()
     args = get_args(args_list)
@@ -224,12 +234,36 @@ if __name__ == "__main__":
         configs.append(base_config)
     args.log_config = configs
     
+    # 仅用于二阶段训练，实例化模型并加载模型权重，此处添加避免修改deepspeed_training 源码 -- by ghx
+    m_Model_cls = SATVideoDiffusionEngine
+    if args.experiment_name == "train-stage-2":
+        model = get_model(args, SATVideoDiffusionEngine)
+        step = None   
+        load_path = args.load
+        args.load = "/root/group-shared/digital-human/hallo3/pretrained_models/hallo3"
+        print("Firstly loading checkpoint from: ", args.load)
+        load_checkpoint(model, args, specific_iteration=step)
+        args.load = load_path
+        print("Secondly loading checkpoint from: ", args.load)
+        load_checkpoint(model, args, specific_iteration=step)
+        args.load = None
+
+        m_Model_cls = model
+
+    #-- by ghx    
     training_main(
         args,
-        model_cls=SATVideoDiffusionEngine,
+        model_cls=m_Model_cls,
         forward_step_function=partial(forward_step, data_class=data_class),
         forward_step_eval=partial(
             forward_step_eval, data_class=data_class, only_log_video_latents=args.only_log_video_latents
         ),
         create_dataset_function=create_dataset_function,
     )
+
+
+    end_time = time.time()
+    print("begin time:", start_time_str)
+    print("end time:", datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
+    elapsed = end_time - start_time
+    print("total time: %02d:%02d:%02d" % (elapsed // 3600, (elapsed % 3600) // 60, elapsed % 60))

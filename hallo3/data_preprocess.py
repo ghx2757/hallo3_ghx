@@ -114,6 +114,7 @@ def process_all_videos(input_video_list: List[Path], output_dir: Path) -> None:
     """
     face_analysis_model_path = "/root/group-shared/digital-human/hallo3/pretrained_models/face_analysis"
     landmark_model_path = "/root/group-shared/digital-human/hallo3/pretrained_models/face_analysis/models/face_landmarker_v2_with_blendshapes.task"
+    # 音频分离模型路径和wav2vec模型路径
     audio_separator_model_file = "/root/group-shared/digital-human/hallo3/pretrained_models/audio_separator/Kim_Vocal_2.onnx"
     wav2vec_model_path = '/root/group-shared/digital-human/hallo3/pretrained_models/wav2vec/wav2vec2-base-960h'
 
@@ -169,7 +170,7 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     if args.output_dir is None:
-        args.output_dir = args.input_dir.parent # 输出目录若不指定，默认为输入目录
+        args.output_dir = args.input_dir.parent # 输出目录若不指定，默认为输入目录父级目录
 
     video_path_list = get_video_paths(
         args.input_dir, args.parallelism, args.rank)

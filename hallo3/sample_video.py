@@ -200,15 +200,26 @@ def add_mask_to_first_frame(image, mask_rate=0.25):
     return image
 
 def sampling_main(args, model_cls):
+    # 1.模型
     if isinstance(model_cls, type):
         model = get_model(args, model_cls)
     else:
         model = model_cls
 
+    # 2.加载模型权重
     step = None
+    # load_checkpoint(model, args, specific_iteration=step)
+    # model.eval()
+    load_path = args.load
+    args.load = "/root/group-shared/digital-human/hallo3/pretrained_models/hallo3"
+    print("Firstly loading checkpoint from: ", args.load)
+    load_checkpoint(model, args, specific_iteration=step)
+    args.load = load_path
+    print("Secondly loading checkpoint from: ", args.load)
     load_checkpoint(model, args, specific_iteration=step)
     model.eval()
 
+    # 3.获得数据迭代器(txt)
     if args.input_type == "cli":
         data_iter = read_from_cli()
     elif args.input_type == "txt":
@@ -221,11 +232,13 @@ def sampling_main(args, model_cls):
 
     image_size = [480, 720]
 
+    # 4.输入图像处理器
     if args.image2video:
         chained_trainsforms = []
         chained_trainsforms.append(TT.ToTensor())
         transform = TT.Compose(chained_trainsforms)
 
+    # 5.音频处理器
     audio_separator_model_file = args.audio_separator_model_path
     wav2vec_model_path = args.wav2vec_model_path
     wav2vec_only_last_features = args.wav2vec_features == "last"
@@ -239,83 +252,97 @@ def sampling_main(args, model_cls):
                     os.path.join(".cache", "audio_preprocess")
                 )
     
+    # 6.人脸图像处理器
     image_processor = ImageProcessor(args.face_analysis_model_path)
 
-    sample_func = model.sample
+    # 7.采样参数
+    sample_func = model.sample # 模型采样方法的引用
     T, H, W, C, F = args.sampling_num_frames, image_size[0], image_size[1], args.latent_channels, 8
-    L = (T-1)*4 + 1
+    # T: 每步采样生成的帧数（例如，每个片段 13 帧）。
+    # H, W: 输出图像的像素高度和宽度（例如，480, 720）。
+    # C: 潜在空间中的通道数（例如，VAE 为 4）。
+    # F: 潜在空间的下采样因子（例如 8，因此潜在尺寸为 H/8 = 60 , W/8 = 90）
+    L = (T-1)*4 + 1 # 应该是对应的音频长度
+    # T 视频帧所需的音频特征的预期长度 13。
 
-
-    num_samples = [1]
+    num_samples = [1] # 每个输入要生成的样本数（此处始终为 1）
     force_uc_zero_embeddings = ["txt"]
     device = model.device
-    ic(device)
+    ic(device) # 调试打印设备信息
     model = model.to("cuda")
-    n_motion_frame = 2
+    n_motion_frame = 2 # 运动帧
     mask_rate = 0.1
     with torch.no_grad():
         for text, cnt in tqdm(data_iter):
             assert args.image2video
-            
+            # 获取单个样本输入信息
             input_list = text.split("@@")
             assert len(input_list)==3
             text, image_path, audio_path = input_list[0], input_list[1], input_list[2]
             assert os.path.exists(image_path), image_path
             assert os.path.exists(audio_path), audio_path
             
-
+            # 输出目录
             name = os.path.splitext(os.path.basename(image_path))[0] + "-" + os.path.splitext(os.path.basename(audio_path))[0] + f"-seed_{args.seed}"
             save_path = os.path.join(args.output_dir, name)
             os.makedirs(save_path, exist_ok=True)
 
+            # 音频编码 -> 音频编码
             audio_emb, length = audio_processor.preprocess(audio_path, L)
             audio_emb = process_audio_emb(audio_emb) 
 
-            face_emb, face_mask_path = image_processor.preprocess(image_path, save_path, 1.2)
+            # 人脸图像编码 -> 人脸编码 + 人脸掩码图像
+            face_emb, face_mask_path = image_processor.preprocess(image_path, save_path, 1.2) # 1.2为人脸检测框的缩放
             face_emb = face_emb.reshape(1, -1)
             face_emb = torch.tensor(face_emb).to("cuda")
             
+            # 加载和处理图像 image face_mask ref_image  motion_image mask_image
             image = Image.open(image_path).convert("RGB")
             image = transform(image).unsqueeze(0).to("cuda")
             face_mask = Image.open(face_mask_path).convert("RGB")
             face_mask = transform(face_mask).unsqueeze(0).to("cuda")
-            ref_image = image * face_mask
+            ref_image = image * face_mask # 参考图像
             
-            _, _, h, w = image.shape
+            _, _, h, w = image.shape # 获取图像的高度和宽度
             if h==w:
                 is_padding = True
             else:
                 is_padding = False
             
             if is_padding:
-                image = resize_for_square_padding(image, image_size).clamp(0, 1)
+                image = resize_for_square_padding(image, image_size).clamp(0, 1)  # 对正方形图像进行填充式调整大小
             else:
-                image = resize_for_rectangle_crop(image, image_size, reshape_mode="center").unsqueeze(0)
+                image = resize_for_rectangle_crop(image, image_size, reshape_mode="center").unsqueeze(0) # 对矩形图像进行裁剪式调整大小
             
-            image = image * 2.0 - 1.0
-            motion_image = image.unsqueeze(2).to(torch.bfloat16)
-            ref_image_pixel = image.unsqueeze(2).to(torch.bfloat16)
+            image = image * 2.0 - 1.0 # 将像素值从 [0, 1] 归一化到 [-1, 1]
+            motion_image = image.unsqueeze(2).to(torch.bfloat16) # 添加一个帧维度（大小为 1），转换为 bfloat16 类型
+            ref_image_pixel = image.unsqueeze(2).to(torch.bfloat16) # 参考
             
-            
+             # 根据宽高比调整参考图像（带遮罩的人脸）大小
             if is_padding:
                 ref_image = resize_for_square_padding(ref_image, image_size).clamp(0, 1)
             else:
                 ref_image = resize_for_rectangle_crop(ref_image, image_size, reshape_mode="center").unsqueeze(0)
-            
-            
+                        
             ref_image = ref_image * 2.0 - 1.0
             ref_image = ref_image.unsqueeze(2).to(torch.bfloat16)
             
-            motion_image = torch.cat([motion_image]*n_motion_frame, dim=2)
-            mask_image = add_mask_to_first_frame(motion_image, mask_rate=mask_rate)
-            mask_image = torch.cat([ref_image_pixel, mask_image], dim=2)
-            mask_image = model.encode_first_stage(mask_image, None)
-            mask_image = mask_image.permute(0, 2, 1, 3, 4).contiguous()
+            motion_image = torch.cat([motion_image]*n_motion_frame, dim=2) # 将第一帧复制 'n_motion_frame = 2' 次
+            mask_image = add_mask_to_first_frame(motion_image, mask_rate=mask_rate)  # 对该序列的第一帧应用遮罩
+            mask_image = torch.cat([ref_image_pixel, mask_image], dim=2) # 前置未遮罩的参考图像像素数据
+            mask_image = model.encode_first_stage(mask_image, None) # 将像素图像编码到潜在空间（使用 VAE）
+            mask_image = mask_image.permute(0, 2, 1, 3, 4).contiguous() # 将维度转换为 (B, T_mask, C_latent, H_latent, W_latent)
+                                                                        # B：Batch size，批量大小（一次处理多少个样本）。
+                                                                        # T_mask：Mask 帧数，序列中包含的帧数（如参考帧+被遮罩帧的总数）。
+                                                                        # C_latent：潜在空间的通道数（如 VAE 编码后的特征通道数，常见为 4）。
+                                                                        # H_latent：潜在空间的高度（通常是原图高除以下采样因子，如 H/8）。
+                                                                        # W_latent：潜在空间的宽度（通常是原图宽除以下采样因子，如 W/8）。
             
             ref_image = model.encode_first_stage(ref_image, None)
             ref_image = ref_image.permute(0, 2, 1, 3, 4).contiguous()
-                    
-            pad_shape = (mask_image.shape[0], T - 1, C, H // F, W // F)
+            
+            # 补齐13帧！
+            pad_shape = (mask_image.shape[0], T - 1, C, H // F, W // F) # mask_image.shape[0] 为 bach_size  H // F = 30   W // F = 45
             mask_image = torch.concat([mask_image, torch.zeros(pad_shape).to(mask_image.device).to(mask_image.dtype)], dim=1)
 
             value_dict = {

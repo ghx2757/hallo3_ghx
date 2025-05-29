@@ -163,8 +163,11 @@ class ImageProcessorForDataProcessing():
                 root=face_analysis_model_path,
                 providers=["CUDAExecutionProvider", "CPUExecutionProvider"],
             )
-            self.face_analysis.prepare(ctx_id=0, det_size=(640, 640))
+            # 人脸分析的
+            self.face_analysis.prepare(ctx_id=0, det_size=(640, 640)) # 指定使用第 0 个 GPU（如果为 -1，则使用 CPU）
+                                                                      # 设置人脸检测时输入图片的尺寸为 640x640 像素。
 
+            # 人脸关键点检测的
             BaseOptions = mp.tasks.BaseOptions
             FaceLandmarker = mp.tasks.vision.FaceLandmarker
             FaceLandmarkerOptions = mp.tasks.vision.FaceLandmarkerOptions
