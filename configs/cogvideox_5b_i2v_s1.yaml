@@ -137,7 +137,7 @@ model:
       emb_models:
           - is_trainable: false
             input_key: txt
-            ucg_rate: 0.1
+            ucg_rate: 0.1 # 在训练时，有 10% 的概率将文本条件置为无条件（如全零或空），用于提升模型的泛化能力和无条件生成能力。
             target: sgm.modules.encoders.modules.FrozenT5Embedder
             params:
               model_dir: "/root/group-shared/digital-human/hallo3/pretrained_models/t5-v1_1-xxl"

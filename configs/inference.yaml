@@ -4,7 +4,7 @@ args:
   mode: inference
 
   # load: /root/group-shared/digital-human/hallo3/pretrained_models/hallo3
-  load: lmy-f0011-stage-1/train-stage-1-05-27-08-16/5000-ema
+  load: lmy-f0011-stage-2/train-stage-2-05-29-09-05/5000-ema
 
   batch_size: 1
   input_type: txt

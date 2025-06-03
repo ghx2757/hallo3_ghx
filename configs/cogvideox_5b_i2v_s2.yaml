@@ -159,6 +159,7 @@ model:
             out_ch: 3
             ch: 128
             ch_mult: [1, 2, 2, 4]
+            #ch_mult: [1, 2, 2, 4, 4]
             attn_resolutions: []
             num_res_blocks: 3
             dropout: 0.0
@@ -173,6 +174,7 @@ model:
             in_channels: 3
             out_ch: 3
             ch: 128
+            #ch_mult: [1, 2, 2, 4, 4]
             ch_mult: [1, 2, 2, 4]
             attn_resolutions: []
             num_res_blocks: 3

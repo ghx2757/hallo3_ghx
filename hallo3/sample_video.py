@@ -208,16 +208,17 @@ def sampling_main(args, model_cls):
 
     # 2.加载模型权重
     step = None
-    # load_checkpoint(model, args, specific_iteration=step)
-    # model.eval()
-    load_path = args.load
-    args.load = "/root/group-shared/digital-human/hallo3/pretrained_models/hallo3"
-    print("Firstly loading checkpoint from: ", args.load)
-    load_checkpoint(model, args, specific_iteration=step)
-    args.load = load_path
-    print("Secondly loading checkpoint from: ", args.load)
     load_checkpoint(model, args, specific_iteration=step)
     model.eval()
+
+    # load_path = args.load
+    # args.load = "/root/group-shared/digital-human/hallo3/pretrained_models/hallo3"
+    # print("Firstly loading checkpoint from: ", args.load)
+    # load_checkpoint(model, args, specific_iteration=step)
+    # args.load = load_path
+    # print("Secondly loading checkpoint from: ", args.load)
+    # load_checkpoint(model, args, specific_iteration=step)
+    # model.eval()
 
     # 3.获得数据迭代器(txt)
     if args.input_type == "cli":
@@ -258,6 +259,7 @@ def sampling_main(args, model_cls):
     # 7.采样参数
     sample_func = model.sample # 模型采样方法的引用
     T, H, W, C, F = args.sampling_num_frames, image_size[0], image_size[1], args.latent_channels, 8
+    # T, H, W, C, F = args.sampling_num_frames, image_size[0], image_size[1], args.latent_channels, 16 # by ghx
     # T: 每步采样生成的帧数（例如，每个片段 13 帧）。
     # H, W: 输出图像的像素高度和宽度（例如，480, 720）。
     # C: 潜在空间中的通道数（例如，VAE 为 4）。
@@ -341,9 +343,10 @@ def sampling_main(args, model_cls):
             ref_image = model.encode_first_stage(ref_image, None)
             ref_image = ref_image.permute(0, 2, 1, 3, 4).contiguous()
             
-            # 补齐13帧！
-            pad_shape = (mask_image.shape[0], T - 1, C, H // F, W // F) # mask_image.shape[0] 为 bach_size  H // F = 30   W // F = 45
+            # 补齐13帧?
+            pad_shape = (mask_image.shape[0], T - 1, C, H // F, W // F) # mask_image.shape[0] 为 bach_size  
             mask_image = torch.concat([mask_image, torch.zeros(pad_shape).to(mask_image.device).to(mask_image.dtype)], dim=1)
+            # to do shape shape shape！！！
 
             value_dict = {
                 "prompt": text,
@@ -366,11 +369,12 @@ def sampling_main(args, model_cls):
                 batch_uc=batch_uc,
                 force_uc_zero_embeddings=force_uc_zero_embeddings,
             )
-
+            # 将条件嵌入和无条件嵌入移动到 CUDA
             for k in c:
                 if not k == "crossattn":
                     c[k], uc[k] = map(lambda y: y[k][: math.prod(num_samples)].to("cuda"), (c, uc))
-
+            
+            # 计算生成视频所需的音频片段数量
             times = audio_emb.shape[0] // (L-n_motion_frame)
             if times * (L-n_motion_frame) < audio_emb.shape[0]:
                 times += 1
