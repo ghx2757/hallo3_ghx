@@ -30,6 +30,8 @@ from sgm.utils.image_processor import ImageProcessor
 from icecream import ic
 from torchvision.utils import save_image
 
+import time
+from datetime import datetime
 def read_from_cli():
     cnt = 0
     try:
@@ -200,6 +202,10 @@ def add_mask_to_first_frame(image, mask_rate=0.25):
     return image
 
 def sampling_main(args, model_cls):
+    start_time = time.time()   
+    start_time_str = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    print("begin time:", start_time_str)
+
     # 1.模型
     if isinstance(model_cls, type):
         model = get_model(args, model_cls)
@@ -461,6 +467,11 @@ def sampling_main(args, model_cls):
                 save_video_as_grid_and_mp4_with_audio(video, save_path, audio_path, fps=args.sampling_fps, is_padding=is_padding)
                 print("saving in: ", save_path)
 
+    end_time = time.time()
+    print("begin time:", start_time_str)
+    print("end time:", datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
+    elapsed = end_time - start_time
+    print("total time: %02d:%02d:%02d" % (elapsed // 3600, (elapsed % 3600) // 60, elapsed % 60))
 
 if __name__ == "__main__":
     if "OMPI_COMM_WORLD_LOCAL_RANK" in os.environ:
