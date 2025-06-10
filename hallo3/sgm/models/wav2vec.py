@@ -17,7 +17,6 @@ import torch.nn.functional as F
 from transformers import Wav2Vec2Model
 from transformers.modeling_outputs import BaseModelOutput
 
-
 class Wav2VecModel(Wav2Vec2Model):
     """
     Wav2VecModel is a custom model class that extends the Wav2Vec2Model class from the transformers library. 

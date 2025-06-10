@@ -3,8 +3,8 @@ args:
   latent_channels: 16
   mode: inference
 
-  # load: /root/group-shared/digital-human/hallo3/pretrained_models/hallo3
-  load: lmy-f0011-stage-2/train-stage-2-05-29-09-05/5000-ema
+ # load: /root/group-shared/digital-human/hallo3/pretrained_models/hallo3
+  load: /root/gaohaixiang/code/hallo3_ghx/checkpoint-new/lmy-09-11-13-stage-1-06-07-08-47/3000-ema
 
   batch_size: 1
   input_type: txt

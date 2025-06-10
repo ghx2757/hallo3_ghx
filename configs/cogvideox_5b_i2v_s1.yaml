@@ -16,7 +16,9 @@ model:
   log_keys:
     - txt
   
-  ref_net_path: /root/group-shared/digital-human/hallo3/pretrained_models/cogvideox-5b-i2v-sat/transformer/
+  # ref_net_path: /root/group-shared/digital-human/hallo3/pretrained_models/cogvideox-5b-i2v-sat/transformer/
+  ref_net_path: /root/group-shared/digital-human/hallo3/pretrained_models/hallo3
+  # ref_net_path: /root/gaohaixiang/code/hallo3_ghx/checkpoint/lmy-all-stage-1-06-05-12-55/4000-ema/1
   
   denoiser_config:
     target: sgm.modules.diffusionmodules.denoiser.DiscreteDenoiser

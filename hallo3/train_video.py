@@ -236,7 +236,8 @@ if __name__ == "__main__":
     
     # 仅用于二阶段训练，实例化模型并加载模型权重，此处添加避免修改deepspeed_training 源码 -- by ghx
     m_Model_cls = SATVideoDiffusionEngine
-    if args.experiment_name == "train-stage-2":
+    if args.experiment_name == "lmy-09-11-13-stage-2":
+        print("======> Loading model for stage 2 training <======")
         model = get_model(args, SATVideoDiffusionEngine)
         step = None   
         load_path = args.load
@@ -249,6 +250,8 @@ if __name__ == "__main__":
         args.load = None
 
         m_Model_cls = model
+    else:
+        print("======> stage 1 training <======")
 
     #-- by ghx    
     training_main(

@@ -16,6 +16,7 @@ from einops import rearrange
 from transformers import Wav2Vec2FeatureExtractor
 
 from sgm.models.wav2vec import Wav2VecModel
+from sgm.models.hubert_model import HubertCustomModel
 from .util import resample_audio
 
 
@@ -37,17 +38,30 @@ class AudioProcessor:
     def __init__(
         self,
         sample_rate,
-        wav2vec_model_path,
+        model_path,
         only_last_features,
         audio_separator_model_path:str=None,
         audio_separator_model_name:str=None,
         cache_dir:str='',
         device="cuda:0",
+        model_name:str="",
     ) -> None:
         self.sample_rate = sample_rate
         self.device = device
-        self.audio_encoder = Wav2VecModel.from_pretrained(wav2vec_model_path, local_files_only=True).to(device=device)
+        if model_name == "wav2vec":
+            self.model_path = model_path
+            self.audio_encoder = Wav2VecModel.from_pretrained(model_path, local_files_only=True).to(device=device)
+            print("==> wav2vec load sucess!")
+        elif model_name == "hubert":
+            self.model_path = model_path
+            self.audio_encoder = HubertCustomModel.from_pretrained(model_path, local_files_only=True).to(device=device)
+            print("==> hubert load sucess!")
+        else:
+            # todo whisper support
+            raise ValueError(f"Unsupported model name: {model_name}. Supported models are 'wav2vec' and 'hubert'.")        
+
         self.audio_encoder.feature_extractor._freeze_parameters()
+
         self.only_last_features = only_last_features
 
         if audio_separator_model_name is not None:
@@ -66,8 +80,10 @@ class AudioProcessor:
             self.audio_separator=None
             print("Use audio directly without vocals seperator.")
 
-
-        self.wav2vec_feature_extractor = Wav2Vec2FeatureExtractor.from_pretrained(wav2vec_model_path, local_files_only=True)
+        if model_name == "wav2vec" or model_name == "hubert":           
+            self.wav2vec_feature_extractor = Wav2Vec2FeatureExtractor.from_pretrained(model_path, local_files_only=True)
+        elif model_name == "whisper":
+            pass # TODO: 加上 whisper
 
 
     def preprocess(self, wav_file: str, clip_length: int=-1, fps: float=25.0):
@@ -99,10 +115,10 @@ class AudioProcessor:
         else:
             vocal_audio_file=wav_file
 
-        # 2. extract wav2vec features
-        speech_array, sampling_rate = librosa.load(vocal_audio_file, sr=self.sample_rate)
+        # 2. extract features
+        speech_array, sampling_rate = librosa.load(vocal_audio_file, sr=self.sample_rate) # 加载
         audio_feature = np.squeeze(self.wav2vec_feature_extractor(speech_array, sampling_rate=sampling_rate).input_values)
-        seq_len = math.ceil(len(audio_feature) / self.sample_rate * fps)
+        seq_len = math.ceil(len(audio_feature) / self.sample_rate * fps) # 先获得音频时长，再乘以 fps 获得总帧数
         audio_length = seq_len
 
         audio_feature = torch.from_numpy(audio_feature).float().to(device=self.device)

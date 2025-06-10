@@ -1,25 +1,25 @@
 args:
   checkpoint_activations: True # using gradient checkpointing
   model_parallel_size: 1
-  experiment_name: train-stage-2
+  experiment_name: lmy-09-11-13-stage-2
   mode: finetune
   
   # stage 2
-  load: /root/gaohaixiang/code/hallo3_ghx/lmy-f0011-stage-1/train-stage-1-05-27-08-16/5000-ema # checkpoint path
+  load: /root/gaohaixiang/code/hallo3_ghx/checkpoint-new/lmy-09-11-13-stage-1-06-07-08-47/5000-ema # checkpoint path
 
   no_load_rng: True
   train_iters: 5000
   eval_iters: 1
   eval_interval: 5000
   eval_batch_size: 1
-  save: ./lmy-f0011-stage-2
+  save: ./checkpoint-new-stage2
   save_interval: 1000
   log_interval: 1
   train_data: [
-    "data/lmy_process_f0011.json",
+    "data/lmy_09_11_13.json",
   ] # Train data path
   valid_data: [ 
-    "data/lmy_process_f0011.json",
+    "data/lmy_09_11_13.json",
   ] # Validation data path, can be the same as train_data(not recommended)
   split: 1,0,0
   num_workers: 16
@@ -29,7 +29,7 @@ args:
 data:
   target: data_video.Stage2_SFTDataset
   params:
-    video_size: [ 480, 720 ]
+    video_size: [480, 720]
     fps: 25
     max_num_frames: 49
     skip_frms_num: 3.

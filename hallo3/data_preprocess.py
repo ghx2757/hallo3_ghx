@@ -103,7 +103,7 @@ def process_single_video(video_path: Path,
         logging.error(f"Failed to process video {video_path}: {e}")
 
 
-def process_all_videos(input_video_list: List[Path], output_dir: Path) -> None:
+def process_all_videos(input_video_list: List[Path], output_dir: Path, model_name: str) -> None:
     """
     Process all videos in the input list.
 
@@ -114,18 +114,30 @@ def process_all_videos(input_video_list: List[Path], output_dir: Path) -> None:
     """
     face_analysis_model_path = "/root/group-shared/digital-human/hallo3/pretrained_models/face_analysis"
     landmark_model_path = "/root/group-shared/digital-human/hallo3/pretrained_models/face_analysis/models/face_landmarker_v2_with_blendshapes.task"
-    # 音频分离模型路径和wav2vec模型路径
-    audio_separator_model_file = "/root/group-shared/digital-human/hallo3/pretrained_models/audio_separator/Kim_Vocal_2.onnx"
-    wav2vec_model_path = '/root/group-shared/digital-human/hallo3/pretrained_models/wav2vec/wav2vec2-base-960h'
+
+    # 音频分离模型路径和音频编码模型路径
+    if model_name == 'hubert':
+        audio_separator_model_file = "/root/group-shared/digital-human/hallo3/pretrained_models/audio_separator/Kim_Vocal_2.onnx"
+        model_path = '/root/gaohaixiang/code/hallo3_ghx/pretrained_models/chinese-hubert-large' 
+    elif model_name == 'whisper':
+        audio_separator_model_file = "" 
+        model_path = ""# todo: whisper音频分离模型
+    else:  # 默认使用wav2vec
+        assert model_name == 'wav2vec', "Unsupported model type. Use 'wav2vec', 'hubert', or 'whisper'."
+        audio_separator_model_file = "/root/group-shared/digital-human/hallo3/pretrained_models/audio_separator/Kim_Vocal_2.onnx"
+        model_path = '/root/group-shared/digital-human/hallo3/pretrained_models/wav2vec/wav2vec2-base-960h'
+
+    assert audio_separator_model_file and model_path, "Audio separator model file and model path must be specified."
 
     # 音频处理
     audio_processor = AudioProcessor( # fps 默认25
         16000,
-        wav2vec_model_path,
+        model_path,
         False, # 是否只是用最后的特征
         os.path.dirname(audio_separator_model_file),
         os.path.basename(audio_separator_model_file),
         os.path.join(output_dir, "vocals"),
+        model_name=model_name,
     )
 
     # 图像处理
@@ -166,6 +178,8 @@ if __name__ == "__main__":
                         type=int, help="Level of parallelism")
     parser.add_argument("-r", "--rank", default=0, type=int,
                         help="Rank for distributed processing")
+    parser.add_argument("-m", "--mode_type", default='wav2vec', type=str,
+                        help="Mode type for processing, default is 'wav2vec, options: 'wav2vec', 'hubert', 'whisper' ")
 
     args = parser.parse_args()
 
@@ -178,4 +192,4 @@ if __name__ == "__main__":
     if not video_path_list:
         logging.warning("No videos to process.")
     else:
-        process_all_videos(video_path_list, args.output_dir)
+        process_all_videos(video_path_list, args.output_dir, args.mode_type)

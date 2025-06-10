@@ -201,7 +201,7 @@ def add_mask_to_first_frame(image, mask_rate=0.25):
     image = image.permute(0, 2, 1, 3, 4).contiguous()
     return image
 
-def sampling_main(args, model_cls):
+def sampling_main(args, audio_model_name, model_cls):
     start_time = time.time()   
     start_time_str = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     print("begin time:", start_time_str)
@@ -214,17 +214,17 @@ def sampling_main(args, model_cls):
 
     # 2.加载模型权重
     step = None
-    load_checkpoint(model, args, specific_iteration=step)
-    model.eval()
-
-    # load_path = args.load
-    # args.load = "/root/group-shared/digital-human/hallo3/pretrained_models/hallo3"
-    # print("Firstly loading checkpoint from: ", args.load)
-    # load_checkpoint(model, args, specific_iteration=step)
-    # args.load = load_path
-    # print("Secondly loading checkpoint from: ", args.load)
     # load_checkpoint(model, args, specific_iteration=step)
     # model.eval()
+
+    load_path = args.load
+    args.load = "/root/group-shared/digital-human/hallo3/pretrained_models/hallo3"
+    print("Firstly loading checkpoint from: ", args.load)
+    load_checkpoint(model, args, specific_iteration=step)
+    args.load = load_path
+    print("Secondly loading checkpoint from: ", args.load)
+    load_checkpoint(model, args, specific_iteration=step)
+    model.eval()
 
     # 3.获得数据迭代器(txt)
     if args.input_type == "cli":
@@ -256,7 +256,8 @@ def sampling_main(args, model_cls):
                     wav2vec_only_last_features,
                     os.path.dirname(audio_separator_model_file),
                     os.path.basename(audio_separator_model_file),
-                    os.path.join(".cache", "audio_preprocess")
+                    os.path.join(".cache", "audio_preprocess"),
+                    model_name = audio_model_name
                 )
     
     # 6.人脸图像处理器
@@ -290,6 +291,7 @@ def sampling_main(args, model_cls):
             assert os.path.exists(image_path), image_path
             assert os.path.exists(audio_path), audio_path
             
+            print("===> Current Image:", image_path, " Audio:", audio_path, " Text:", text)
             # 输出目录
             name = os.path.splitext(os.path.basename(image_path))[0] + "-" + os.path.splitext(os.path.basename(audio_path))[0] + f"-seed_{args.seed}"
             save_path = os.path.join(args.output_dir, name)
@@ -489,4 +491,6 @@ if __name__ == "__main__":
     args.model_config.network_config.params.transformer_args.checkpoint_activations = False
     args.model_config.loss_fn_config.params.sigma_sampler_config.params.uniform_sampling = False
 
-    sampling_main(args, model_cls=SATVideoDiffusionEngine)
+    audio_model_name = "wav2vec" # 制定音频编码器
+
+    sampling_main(args, audio_model_name, model_cls=SATVideoDiffusionEngine)
