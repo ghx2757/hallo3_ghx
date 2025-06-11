@@ -1,0 +1,17 @@
+.vscode/
+.idea/
+.cache/
+__pycache__
+
+
+assets
+TestData
+runs
+pretrained_models
+data
+examples
+data_processed
+
+checkpoint
+temp
+

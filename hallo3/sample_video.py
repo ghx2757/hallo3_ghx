@@ -214,17 +214,17 @@ def sampling_main(args, audio_model_name, model_cls):
 
     # 2.加载模型权重
     step = None
-    # load_checkpoint(model, args, specific_iteration=step)
-    # model.eval()
-
-    load_path = args.load
-    args.load = "/root/group-shared/digital-human/hallo3/pretrained_models/hallo3"
-    print("Firstly loading checkpoint from: ", args.load)
-    load_checkpoint(model, args, specific_iteration=step)
-    args.load = load_path
-    print("Secondly loading checkpoint from: ", args.load)
     load_checkpoint(model, args, specific_iteration=step)
     model.eval()
+
+    # load_path = args.load
+    # args.load = "/root/group-shared/digital-human/hallo3/pretrained_models/hallo3"
+    # print("Firstly loading checkpoint from: ", args.load)
+    # load_checkpoint(model, args, specific_iteration=step)
+    # args.load = load_path
+    # print("Secondly loading checkpoint from: ", args.load)
+    # load_checkpoint(model, args, specific_iteration=step)
+    # model.eval()
 
     # 3.获得数据迭代器(txt)
     if args.input_type == "cli":

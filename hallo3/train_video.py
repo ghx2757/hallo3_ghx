@@ -242,6 +242,7 @@ if __name__ == "__main__":
         step = None   
         load_path = args.load
         args.load = "/root/group-shared/digital-human/hallo3/pretrained_models/hallo3"
+        # args.load = "/root/gaohaixiang/code/hallo3_ghx/checkpoint-new/lmy-09-11-13-stage-1-06-07-08-47/5000-ema"
         print("Firstly loading checkpoint from: ", args.load)
         load_checkpoint(model, args, specific_iteration=step)
         args.load = load_path

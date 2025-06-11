@@ -1,0 +1,17 @@
+# 切分数据
+python split_and_crop_video.py --input TestData/train/lmy/f0011.mp4 --output_dir TestData/train/lmy_f0011_process --mode time --segment_length 3 --crop
+
+# 数据预处理
+bash scripts/data_preprocess.sh {dataset_name} {parallelism} {rank} {output_name}
+
+# 推理
+bash scripts/inference_long_batch.sh ./examples/inference/input.txt ./output
+
+# stage1
+bash scripts/finetune_multi_gpus_s1.sh
+
+# stage2
+bash scripts/finetune_multi_gpus_s2.sh
+
+# 采样音频
+ffmpeg -i input.wav -ar 16000 input_16k.wav
